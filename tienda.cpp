@@ -24,7 +24,7 @@ private:
     string material;
 
 public:
-    Playera(string talla, string color, string material)
+    Playera(string color, string talla, string material)
         : Producto(color), talla(talla), material(material) {}
 
     string getTalla() { return talla; }
@@ -101,7 +101,7 @@ int main() {
     cout << "Material: ";
     cin >> materialP;
 
-    Playera p1(tallaP, colorP, materialP);
+    Playera p1(colorP, tallaP, materialP);
 
     cout << "\nCREAR SHORT\n";
     string tallaS, colorS, telaS;
@@ -138,4 +138,3 @@ int main() {
 
     return 0;
 }
-
