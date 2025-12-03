@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 // Clase Producto
@@ -89,8 +90,28 @@ public:
     }
 };
 
+// Agregación: Clase que guarda un conjunto de productos
+class Inventario {
+private:
+    vector<Producto*> productos;
+
+public:
+    void agregarProducto(Producto* p) {
+        productos.push_back(p);
+    }
+
+    void mostrarProductos() {
+        cout << "\nINVENTARIO\n";
+        for (Producto* p : productos) {
+            p->mostrarInfo();
+        }
+    }
+};
+
 // Clase Main
 int main() {
+
+    Inventario inventario;
 
     cout << "CREAR PLAYERA\n";
     string tallaP, colorP, materialP;
@@ -101,7 +122,8 @@ int main() {
     cout << "Material: ";
     cin >> materialP;
 
-    Playera p1(colorP, tallaP, materialP);
+    Playera* p1 = new Playera(colorP, tallaP, materialP);
+    inventario.agregarProducto(p1);
 
     cout << "\nCREAR SHORT\n";
     string tallaS, colorS, telaS;
@@ -116,7 +138,8 @@ int main() {
     cout << "Tipo de tela: ";
     cin >> telaS;
 
-    ShortDeportivo s1(tallaS, bols == 1, telaS, colorS);
+    ShortDeportivo* s1 = new ShortDeportivo(tallaS, bols == 1, telaS, colorS);
+    inventario.agregarProducto(s1);
 
     cout << "\nCREAR ACCESORIO\n";
     string nombreA, colorA;
@@ -129,12 +152,11 @@ int main() {
     cout << "Precio: ";
     cin >> precioA;
 
-    Accesorio a1(nombreA, colorA, precioA);
+    Accesorio* a1 = new Accesorio(nombreA, colorA, precioA);
+    inventario.agregarProducto(a1);
 
-    cout << "\nPRODUCTOS CREADOS\n";
-    p1.mostrarInfo();
-    s1.mostrarInfo();
-    a1.mostrarInfo();
+    cout << "\nPRODUCTOS\n";
+    inventario.mostrarProductos();
 
     return 0;
 }
