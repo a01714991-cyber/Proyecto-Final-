@@ -1,0 +1,20 @@
+Revisión de criterios solicitados en el avance:
+
+1. Utilizo el concepto de composición (o agregación) en el diagrama de clases.
+   → El proyecto incluye la clase Inventario, la cual almacena un conjunto de objetos Producto* mediante agregación.
+
+2. Implemento las clases en C++ siguiendo el diseño del diagrama de clases en UML.
+   → Se implementaron las clases Producto, Playera, ShortDeportivo, Accesorio e Inventario.
+
+3. Compruebo el acceso a los atributos y métodos de la clase (encapsulamiento correcto, mando a llamar los objetos de forma útil).
+   → Todas las clases utilizan atributos privados/protegidos, con getters y setters. 
+     El main crea objetos, accede a ellos y manda a llamar sus métodos correctamente.
+
+4. Implemento composición (o agregación) siguiendo mi diagrama de clases.
+   → La clase Inventario contiene un vector de Producto*, representando agregación de objetos tipo Producto y sus derivados.
+
+5. Implemento clases apegadas a requerimientos a partir de un modelo.
+   → Las clases se definieron siguiendo el modelo: herencia desde Producto, métodos sobrescritos y características propias de cada producto.
+
+6. Sigo estándares en todo mi código fuente: estilo, sangrías, comentarios, nombres, etc.
+   → El código usa sangrías consistentes, nombres claros, y comentarios únicamente en la parte solicitada.

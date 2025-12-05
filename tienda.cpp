@@ -9,7 +9,7 @@ protected:
     string color;
 
 public:
-    Producto(string color) : color(color) {}
+    Producto(string color) : color(color) {} 
 
     // GETTERS y SETTERS
     string getColor() { return color; }
@@ -25,7 +25,7 @@ private:
     string material;
 
 public:
-    Playera(string color, string talla, string material)
+    Playera(string color, string talla, string material) 
         : Producto(color), talla(talla), material(material) {}
 
     string getTalla() { return talla; }
@@ -34,8 +34,8 @@ public:
     void setMaterial(string nuevoMaterial) { material = nuevoMaterial; }
 
     void mostrarInfo() override {
-        cout << "Playera - Talla: " << talla
-             << ", Color: " << color
+        cout << "Playera - Talla: " << talla 
+             << ", Color: " << color 
              << ", Material: " << material << endl;
     }
 };
@@ -60,9 +60,9 @@ public:
     void setTipoTela(string nuevoTipoTela) { tipoTela = nuevoTipoTela; }
 
     void mostrarInfo() override {
-        cout << "Short - Talla: " << talla
-             << ", Color: " << color
-             << ", Bolsas: " << (tieneBolsas ? "Sí" : "No")
+        cout << "Short - Talla: " << talla 
+             << ", Color: " << color 
+             << ", Bolsas: " << (tieneBolsas ? "Sí" : "No") 
              << ", Tela: " << tipoTela << endl;
     }
 };
@@ -84,8 +84,8 @@ public:
     void setPrecio(double nuevoPrecio) { precio = nuevoPrecio; }
 
     void mostrarInfo() override {
-        cout << "Accesorio - Nombre: " << nombre
-             << ", Color: " << color
+        cout << "Accesorio - Nombre: " << nombre 
+             << ", Color: " << color 
              << ", Precio: $" << precio << endl;
     }
 };
