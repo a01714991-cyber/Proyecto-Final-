@@ -18,3 +18,5 @@ Revisión de criterios solicitados en el avance:
 
 6. Sigo estándares en todo mi código fuente: estilo, sangrías, comentarios, nombres, etc.
    → El código usa sangrías consistentes, nombres claros, y comentarios únicamente en la parte solicitada.
+
+IGUALMENTE YA HA SIDO CORREGIDO EL DIAGRAMA
